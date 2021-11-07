@@ -7,9 +7,7 @@ const Post = new Schema(
     author: { type: String, required: true },
     content: { type: String, required: true }
   },
-  {
-timestamps: true 
-  }
+  { timestamps: true }
 )
 
 export default mongoose.model('posts', Post)
