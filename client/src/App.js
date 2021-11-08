@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import './App.css'
+import Posts from './screens/Posts/Posts'
+import PostCreate from './screens/PostCreate/PostCreate'
+import PostEdit from './screens/PostEdit/PostEdit'
+import PostDetail from './screens/PostDetail/PostDetail'
+import { Route, Switch } from 'react-router-dom'
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Switch>
+        <Route exact path="/" component={Posts} />
+        <Route path="/create-post" component={PostCreate} />
+        <Route exact path="/post/:id/edit" component={PostEdit} />
+        <Route exact path="/post/:id" component={PostDetail} />
+      </Switch>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
