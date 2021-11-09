@@ -5,6 +5,7 @@ Author
 Content
 
 */
+<<<<<<< HEAD
 import { Link } from "react-router-dom";
 import "./Post.css"
 
@@ -21,3 +22,6 @@ const Post = (props) => {
 };
 
 export default Post
+=======
+
+>>>>>>> a5c696a32242ae8febcafbade4850c5b0ace42c9
