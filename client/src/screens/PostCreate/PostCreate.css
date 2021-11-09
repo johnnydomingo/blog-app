@@ -1,0 +1,12 @@
+.create-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10vh 10vw;
+}
+
+input {
+  margin: 7px;
+  padding: 7px;
+}

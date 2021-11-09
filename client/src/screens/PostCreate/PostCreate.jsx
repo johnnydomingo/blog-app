@@ -8,7 +8,7 @@
 import { useState } from 'react'
 import './PostCreate.css'
 import Layout from '../../components/Layout/Layout.jsx'
-import  { Navigate } from 'react-router-dom'
+import { Navigate } from 'react-router-dom'
 import { createPost } from '../../services/posts.js'
 
 const PostCreate = (props) => {
@@ -42,31 +42,31 @@ const PostCreate = (props) => {
     <Layout>
       <form className="create-form" onSubmit={handleSubmit}>
         <input
-            className="input-title"
-            placeholder="Title"
-            value={post.title}
-            name='title'
-            required
-            autoFocus
-            onChange={handleChange}
+          className="input-title"
+          placeholder="Title"
+          value={post.title}
+          name='title'
+          required
+          autoFocus
+          onChange={handleChange}
         />
         <input
           className="input-author"
-          placeholder="author"
+          placeholder="Author"
           value={post.author}
           name='author'
           required
           autoFocus
           onChange={handleChange}
-      />
+        />
         <input
-            className="input-content"
-            placeholder="Content"
-            value={post.content}
-            name='content'
-            required
-            autoFocus
-            onChange={handleChange}
+          className="input-content"
+          placeholder="Content"
+          value={post.content}
+          name='content'
+          required
+          autoFocus
+          onChange={handleChange}
         />
         <button type='submit' className="submit-button">
           Submit

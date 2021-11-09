@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import "./Posts.css";
 import Layout from "../../components/Layout/Layout";
 import Post from '../../components/Post/Post'
-import {getPosts} from '../../services/posts'
+import PostCard from '../../components/PostCard/PostCard'
+import { getPosts } from '../../services/posts'
 
 const Posts = () => {
   const [posts, setPosts] = useState([]);
@@ -21,7 +22,7 @@ const Posts = () => {
 
         {posts.map((post, index) => {
           return (
-            <Post
+            <PostCard
               _id={post._id}
               title={post.title}
               author={post.author}

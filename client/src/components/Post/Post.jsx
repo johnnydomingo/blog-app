@@ -10,9 +10,9 @@ import { Link } from "react-router-dom";
 import "./Post.css"
 
 const Post = (props) => {
-  return(
+  return (
     <div>
-      <Link className ="post" to={`/posts/${props._id}`}>
+      <Link className="post" to={`/posts/${props._id}`}>
         <div className="post-title">{props.title}</div>
         <div className="post-author">{props.author}</div>
         <div className="post-content">{props.content}</div>
