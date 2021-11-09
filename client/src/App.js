@@ -10,10 +10,10 @@ const App = () => {
   return (
     <div className="app">
       <Routes>
-        <Route exact path="/" component={Posts} />
-        <Route path="/create-post" component={PostCreate} />
-        <Route exact path="/post/:id/edit" component={PostEdit} />
-        <Route exact path="/post/:id" component={PostDetail} />
+        <Route exact path="/" element={<Posts />} />
+        <Route path="/create-post" element={<PostCreate />} />
+        <Route exact path="/posts/:id/edit" element={<PostEdit />} />
+        <Route exact path="/posts/:id" element={<PostDetail />} />
       </Routes>
     </div>
   )

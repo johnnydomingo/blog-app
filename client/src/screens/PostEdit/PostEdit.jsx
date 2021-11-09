@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import './PostEdit.css'
-import { useParams, Redirect } from 'react-router-dom'
-import Layout from '../..components/Layout/Layout'
+import { useParams, Navigate } from 'react-router-dom'
+import Layout from '../../components/Layout/Layout'
 import { getPost, updatePost } from '../../services/posts'
 
 const PostEdit = (props) => {
@@ -37,7 +37,7 @@ const PostEdit = (props) => {
     }
 
     if (isUpdated) {
-        return <Redirect to={`/posts/${id}`} />
+        return <Navigate to={`/posts/${id}`} />
     }
 
     return (

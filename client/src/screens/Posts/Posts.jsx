@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import "./Posts.css";
 import Layout from "../../components/Layout/Layout";
 import Post from '../../components/Post/Post'
-import {getPosts} from '../../services/products'
+import {getPosts} from '../../services/posts'
 
 const Posts = () => {
   const [posts, setPosts] = useState([]);
@@ -18,6 +18,7 @@ const Posts = () => {
   return (
     <Layout>
       <div className="posts">
+
         {posts.map((post, index) => {
           return (
             <Post

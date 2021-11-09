@@ -8,7 +8,7 @@
 import { useState } from 'react'
 import './PostCreate.css'
 import Layout from '../../components/Layout/Layout.jsx'
-import  { Redirect } from 'react-router-dom'
+import  { Navigate } from 'react-router-dom'
 import { createPost } from '../../services/posts.js'
 
 const PostCreate = (props) => {
@@ -36,7 +36,7 @@ const PostCreate = (props) => {
   }
 
   if (isCreated) {
-    return <Redirect to={`/`} />
+    return <Navigate to='/' />
   }
   return (
     <Layout>
